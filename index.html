@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>사회과학대학 교수세미나 · 2026 동계</title>
+<meta name="description" content="사회과학대학 교수세미나에 교수님들을 초대합니다.">
+<meta property="og:title" content="사회과학대학 교수세미나 · 2026 동계">
+<meta property="og:description" content="사회과학대학 교수세미나에 교수님들을 초대합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#123A2E; --pine-deep:#0A241C; --pine-mid:#1C4B3C;
+  --gold:#C8AC6E; --gold-deep:#977B3F; --gold-soft:#E4D3A6;
+  --berry:#8F2F33;
+  --paper:#F7F6F0; --paper-line:#DDD8C6; --ink:#1E2B26; --ink-soft:#56635C;
+  --snow:#FFFFFF; --foot:#081D16; --foot-ink:#C9D3CC;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --pine:#0F3127; --pine-deep:#071C15; --paper:#EFEDE4; --paper-line:#D2CCB8; --ink:#1A2621; --ink-soft:#4E5B54;
+    --foot:#05140F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --pine:#0F3127; --pine-deep:#071C15; --paper:#EFEDE4; --paper-line:#D2CCB8; --ink:#1A2621; --ink-soft:#4E5B54;
+  --foot:#05140F; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--pine-deep);color:var(--ink);
+  font-family:"Gowun Batang","Nanum Myeongjo","Noto Serif KR","AppleMyungjo","Batang",serif;
+  line-height:1.9;word-break:keep-all;overflow-x:hidden;
+}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* ---------- Cover ---------- */
+.cover{
+  position:relative;overflow:hidden;isolation:isolate;
+  padding:clamp(56px,10vw,104px) 22px clamp(64px,10vw,110px);
+  background:
+    radial-gradient(90% 60% at 50% 38%, #24594A 0%, transparent 70%),
+    linear-gradient(180deg,var(--pine) 0%,var(--pine-deep) 100%);
+}
+.snow{position:absolute;inset:0;z-index:0;pointer-events:none}
+.snow i{position:absolute;top:-10px;width:var(--z);height:var(--z);border-radius:50%;
+  background:var(--snow);opacity:var(--o);filter:blur(.3px)}
+@media (prefers-reduced-motion:no-preference){
+  .snow i{animation:fall var(--d) linear var(--w) infinite}
+  @keyframes fall{from{transform:translate(0,-10px)}to{transform:translate(28px,110vh)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .snow i{top:var(--t)}
+}
+.stage{position:relative;z-index:1;width:min(100%,400px);margin:0 auto}
+.fir{position:absolute;pointer-events:none;color:var(--gold);width:clamp(150px,46vw,220px);z-index:2}
+.fir svg{display:block;width:100%;height:auto;overflow:visible}
+.fir-l{top:-34px;left:-70px;transform:rotate(-6deg)}
+.fir-r{top:-34px;right:-70px;transform:scaleX(-1) rotate(-6deg)}
+.fir-b{bottom:-46px;right:-64px;width:clamp(120px,36vw,170px);transform:rotate(172deg);opacity:.85}
+.fir .needles{fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round}
+.fir .berries{fill:var(--berry);stroke:var(--gold-soft);stroke-width:.6}
+
+.arch{
+  position:relative;background:var(--paper);
+  border-radius:200px 200px 6px 6px;
+  padding:12px;
+  box-shadow:0 40px 70px -30px rgba(0,0,0,.65);
+}
+.arch-in{
+  border:1px solid var(--gold);border-radius:190px 190px 2px 2px;
+  padding:clamp(70px,20vw,92px) clamp(18px,6vw,34px) clamp(34px,8vw,44px);
+  text-align:center;position:relative;
+}
+.arch-in::after{content:"";position:absolute;inset:5px;border:1px solid var(--gold-soft);
+  border-radius:185px 185px 0 0;pointer-events:none}
+.flake{display:block;width:26px;height:26px;margin:0 auto 14px;color:var(--gold-deep)}
+.script{font-family:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;font-weight:400;
+  color:var(--pine-mid);font-size:clamp(40px,11.5vw,54px);line-height:1.1;margin:0 0 18px}
+.cover-title{font-size:clamp(22px,6.2vw,28px);font-weight:700;line-height:1.45;margin:0;color:var(--ink)}
+.cover-season{display:block;margin-top:6px;font-weight:400;font-size:.62em;letter-spacing:.32em;color:var(--gold-deep);padding-left:.32em}
+.cover-lead{color:var(--ink-soft);font-size:14.5px;margin:22px 0 0;line-height:1.85}
+.date{margin:30px 0 0;display:flex;justify-content:center;align-items:baseline;gap:14px;color:var(--pine)}
+.date .n{font-size:clamp(34px,10vw,44px);line-height:1;font-weight:400}
+.date .dot{width:5px;height:5px;transform:rotate(45deg);background:var(--gold);align-self:center}
+.cover-meta{margin:20px 0 0;font-size:14px;line-height:1.95;color:var(--ink)}
+.cover-meta .time{display:inline-block;margin-bottom:4px;padding:2px 14px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);font-weight:700;color:var(--pine)}
+
+/* ---------- Body ---------- */
+.trim{height:9px;background:
+  linear-gradient(var(--gold),var(--gold)) 0 1px/100% 1px no-repeat,
+  linear-gradient(var(--gold),var(--gold)) 0 7px/100% 1px no-repeat,var(--pine-deep)}
+.body{padding:clamp(30px,7vw,64px) 16px clamp(44px,8vw,80px);background:var(--pine-deep)}
+.sheet{width:min(100%,560px);margin:0 auto;background:var(--paper);
+  padding:clamp(44px,9vw,68px) clamp(22px,7vw,56px);position:relative}
+.sheet::before{content:"";position:absolute;inset:8px;border:1px solid var(--paper-line);pointer-events:none}
+.sec{text-align:center;position:relative}
+.sec h2{font-size:clamp(19px,5.2vw,23px);font-weight:700;margin:0 0 26px;line-height:1.5;color:var(--pine)}
+.sec h3{font-size:17px;font-weight:700;margin:0 0 4px;color:var(--ink)}
+.letter p{margin:0 0 1.35em;font-size:15.5px}
+.letter p.close{margin:2em 0 0}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:46px auto;width:180px;color:var(--gold-deep)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--gold)}
+.divider svg{width:18px;height:18px;flex:none}
+
+.when-line{margin:0 0 20px;font-size:16px}
+.cal{width:100%;max-width:330px;margin:0 auto;border-collapse:collapse;font-size:15px;table-layout:fixed}
+.cal caption{font-size:15px;color:var(--ink-soft);padding-bottom:10px}
+.cal th{font-weight:400;font-size:13px;color:var(--ink-soft);padding:6px 0;border-bottom:1px solid var(--paper-line)}
+.cal td{height:42px;padding:0;text-align:center}
+.cal th:first-child,.cal td:first-child{color:var(--berry)}
+.cal .on span{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;
+  background:var(--pine);color:#fff;font-weight:700;box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--gold)}
+.dday{margin:20px 0 0;font-size:15px;color:var(--ink-soft)}
+.dday b{color:var(--pine);font-weight:700}
+
+.program{list-style:none;margin:0 auto;padding:0;max-width:340px;text-align:left;counter-reset:p}
+.program li{counter-increment:p;position:relative;padding:13px 0 13px 50px;border-bottom:1px solid var(--paper-line);font-size:15.5px;line-height:1.6}
+.program li:last-child{border-bottom:0}
+.program li::before{content:counter(p);position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:32px;height:32px;border-radius:50%;background:var(--pine);color:var(--gold-soft);
+  display:grid;place-items:center;font-size:14px}
+.program small{display:block;color:var(--ink-soft);font-size:13.5px}
+
+.place+.place{margin-top:30px;padding-top:30px;border-top:1px solid var(--paper-line)}
+.place .tag{display:inline-block;font-size:13px;color:var(--gold-soft);background:var(--pine);border-radius:999px;padding:1px 14px;margin-bottom:10px}
+.place p{margin:0;font-size:14.5px;color:var(--ink-soft);line-height:1.7}
+.btns{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;
+  border:1px solid var(--pine);border-radius:999px;text-decoration:none;font-size:14px;color:var(--pine);
+  transition:background .2s,color .2s}
+.btn:hover{background:var(--pine);color:#fff}
+.btn svg{width:15px;height:15px}
+
+.contact p{margin:0;font-size:15px}
+.contact .tel{display:inline-block;margin-top:6px;font-size:18px;font-weight:700;text-decoration:none;color:var(--pine);border-bottom:1px solid var(--gold)}
+
+footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26px 16px;font-size:13px;letter-spacing:.04em}
+
+@media (prefers-reduced-motion:no-preference){
+  .stage{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+}
+.edge{display:none;position:absolute;z-index:0;pointer-events:none;color:var(--gold);opacity:.55;width:min(30vw,380px)}
+.edge svg{display:block;width:100%;height:auto}
+.edge-tl{top:-30px;left:-40px;transform:rotate(-20deg)}
+.edge-br{bottom:-40px;right:-40px;transform:rotate(160deg)}
+@media (min-width:760px){.edge{display:block}}
+@media (max-width:420px){
+  .fir-l{left:-58px}.fir-r{right:-58px}
+  .letter p{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="fir" viewBox="0 0 300 300">
+      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M0.0 300.0 Q90.0 170.0 300.0 20.0 M5.4 292.3 l29.3 -3.3 M5.4 292.3 l-6.3 -28.8 M11.0 284.6 l28.9 -2.8 M11.0 284.6 l-5.8 -28.4 M16.8 276.9 l28.5 -2.3 M16.8 276.9 l-5.3 -28.1 M22.8 269.1 l28.0 -1.9 M22.8 269.1 l-4.8 -27.6 M29.1 261.3 l27.5 -1.4 M29.1 261.3 l-4.3 -27.2 M35.5 253.5 l27.1 -1.0 M35.5 253.5 l-3.9 -26.8 M42.1 245.6 l26.6 -0.7 M42.1 245.6 l-3.5 -26.4 M49.0 237.7 l26.1 -0.3 M49.0 237.7 l-3.1 -25.9 M56.1 229.8 l25.6 -0.0 M56.1 229.8 l-2.7 -25.5 M63.3 221.8 l25.1 0.3 M63.3 221.8 l-2.3 -25.0 M70.8 213.8 l24.7 0.6 M70.8 213.8 l-2.0 -24.6 M78.5 205.7 l24.2 0.8 M78.5 205.7 l-1.7 -24.1 M86.4 197.7 l23.7 1.1 M86.4 197.7 l-1.4 -23.7 M94.5 189.6 l23.2 1.3 M94.5 189.6 l-1.1 -23.2 M102.8 181.4 l22.7 1.5 M102.8 181.4 l-0.9 -22.7 M111.3 173.2 l22.2 1.7 M111.3 173.2 l-0.6 -22.2 M120.0 165.0 l21.7 1.9 M120.0 165.0 l-0.4 -21.7 M128.9 156.7 l21.2 2.0 M128.9 156.7 l-0.2 -21.3 M138.1 148.5 l20.7 2.2 M138.1 148.5 l0.0 -20.8 M147.4 140.1 l20.2 2.3 M147.4 140.1 l0.2 -20.3 M157.0 131.8 l19.7 2.4 M157.0 131.8 l0.4 -19.8 M166.7 123.4 l19.2 2.5 M166.7 123.4 l0.5 -19.3 M176.7 115.0 l18.7 2.6 M176.7 115.0 l0.7 -18.8 M186.9 106.5 l18.2 2.7 M186.9 106.5 l0.8 -18.3 M197.2 98.0 l17.7 2.8 M197.2 98.0 l0.9 -17.8 M207.8 89.5 l17.2 2.8 M207.8 89.5 l1.0 -17.4 M218.6 80.9 l16.7 2.9 M218.6 80.9 l1.1 -16.9 M229.6 72.3 l16.2 2.9 M229.6 72.3 l1.2 -16.4 M240.8 63.7 l15.7 2.9 M240.8 63.7 l1.3 -15.9 M252.2 55.0 l15.2 2.9 M252.2 55.0 l1.3 -15.4 M263.9 46.3 l14.7 2.9 M263.9 46.3 l1.4 -14.9 M275.7 37.6 l14.2 2.9 M275.7 37.6 l1.4 -14.4 M287.8 28.8 l13.7 2.9 M287.8 28.8 l1.5 -13.9"/><path d="M70.0 228.0 Q70.0 170.0 40.0 120.0 M69.8 218.4 l12.3 -12.0 M69.8 218.4 l-13.3 -10.9 M69.2 208.9 l11.1 -12.0 M69.2 208.9 l-13.1 -9.8 M68.1 199.5 l10.1 -11.8 M68.1 199.5 l-12.8 -8.8 M66.7 190.2 l9.0 -11.6 M66.7 190.2 l-12.5 -7.7 M64.8 181.1 l8.0 -11.3 M64.8 181.1 l-12.1 -6.8 M62.5 172.0 l7.0 -11.0 M62.5 172.0 l-11.7 -5.8 M59.8 163.1 l6.1 -10.6 M59.8 163.1 l-11.2 -4.9 M56.7 154.2 l5.2 -10.1 M56.7 154.2 l-10.6 -4.1 M53.1 145.5 l4.4 -9.6 M53.1 145.5 l-10.0 -3.4 M49.2 136.9 l3.7 -9.0 M49.2 136.9 l-9.4 -2.7 M44.8 128.4 l3.0 -8.4 M44.8 128.4 l-8.7 -2.1"/><path d="M140.0 150.0 Q170.0 100.0 160.0 50.0 M145.1 140.9 l14.7 -3.7 M145.1 140.9 l-5.2 -14.3 M149.6 131.8 l13.7 -4.3 M149.6 131.8 l-5.8 -13.2 M153.4 122.7 l12.7 -4.9 M153.4 122.7 l-6.2 -12.1 M156.5 113.6 l11.6 -5.4 M156.5 113.6 l-6.6 -11.0 M159.0 104.5 l10.5 -5.8 M159.0 104.5 l-6.8 -9.9 M160.8 95.5 l9.4 -6.1 M160.8 95.5 l-7.0 -8.7 M162.0 86.4 l8.3 -6.2 M162.0 86.4 l-7.1 -7.6 M162.5 77.3 l7.2 -6.3 M162.5 77.3 l-7.0 -6.6 M162.3 68.2 l6.2 -6.2 M162.3 68.2 l-6.9 -5.5 M161.5 59.1 l5.2 -6.1 M161.5 59.1 l-6.6 -4.6"/><path d="M110.0 186.0 Q160.0 190.0 210.0 170.0 M120.0 186.6 l9.1 10.8 M120.0 186.6 l9.8 -10.2 M130.0 186.6 l9.1 9.8 M130.0 186.6 l8.8 -10.1 M140.0 186.2 l9.0 8.8 M140.0 186.2 l7.8 -9.8 M150.0 185.4 l8.7 7.8 M150.0 185.4 l6.8 -9.5 M160.0 184.0 l8.5 6.8 M160.0 184.0 l5.9 -9.1 M170.0 182.2 l8.1 5.9 M170.0 182.2 l5.1 -8.7 M180.0 179.8 l7.7 5.1 M180.0 179.8 l4.3 -8.2 M190.0 177.0 l7.2 4.3 M190.0 177.0 l3.6 -7.6 M200.0 173.8 l6.7 3.6 M200.0 173.8 l2.9 -7.0"/><path d="M205.0 92.0 Q240.0 95.0 270.0 85.0 M213.7 92.5 l7.1 8.6 M213.7 92.5 l7.8 -8.0 M222.2 92.7 l7.0 7.6 M222.2 92.7 l6.9 -7.7 M230.5 92.4 l6.8 6.7 M230.5 92.4 l6.0 -7.4 M238.8 91.8 l6.5 5.8 M238.8 91.8 l5.1 -7.1 M246.8 90.7 l6.1 4.9 M246.8 90.7 l4.3 -6.6 M254.7 89.2 l5.7 4.1 M254.7 89.2 l3.5 -6.1 M262.4 87.3 l5.2 3.4 M262.4 87.3 l2.8 -5.6"/></g>
+      <g fill="#8F2F33" stroke="#E4D3A6" stroke-width=".6"><circle cx="64" cy="242" r="6"/><circle cx="76" cy="250" r="5"/><circle cx="70" cy="236" r="4.5"/><circle cx="150" cy="168" r="5"/><circle cx="160" cy="160" r="4.5"/></g>
+    </symbol>
+    <symbol id="flake" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7"/>
+        <path d="M9.5 3.8L12 6.2l2.5-2.4M9.5 20.2L12 17.8l2.5 2.4M4.2 9.9l3.4-.5-1-3.3M19.8 14.1l-3.4.5 1 3.3M4.2 14.1l3.4.5-1 3.3M19.8 9.9l-3.4-.5 1-3.3"/>
+      </g>
+    </symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="cover">
+  <div class="snow" aria-hidden="true"><i style="left:32.4%;--d:10.4s;--w:-2.1s;--z:2.2px;--o:0.62;--t:36%"></i><i style="left:5.8%;--d:13.6s;--w:-5.8s;--z:3.3px;--o:0.38;--t:10%"></i><i style="left:42.5%;--d:16.4s;--w:-5.3s;--z:2.7px;--o:0.66;--t:90%"></i><i style="left:57.7%;--d:12.6s;--w:-0.1s;--z:2.1px;--o:0.78;--t:29%"></i><i style="left:14.4%;--d:10.1s;--w:-4.1s;--z:4.4px;--o:0.44;--t:56%"></i><i style="left:63.9%;--d:12.4s;--w:-2.7s;--z:2.2px;--o:0.38;--t:21%"></i><i style="left:68.0%;--d:12.8s;--w:-4.1s;--z:3.8px;--o:0.58;--t:30%"></i><i style="left:79.4%;--d:15.3s;--w:-4.5s;--z:3.7px;--o:0.61;--t:83%"></i><i style="left:72.9%;--d:11.6s;--w:-0.1s;--z:2.4px;--o:0.56;--t:72%"></i><i style="left:15.2%;--d:13.4s;--w:-5.8s;--z:4.0px;--o:0.73;--t:55%"></i><i style="left:87.5%;--d:11.8s;--w:-1.8s;--z:3.8px;--o:0.64;--t:44%"></i><i style="left:84.0%;--d:17.5s;--w:-3.2s;--z:4.0px;--o:0.38;--t:67%"></i><i style="left:64.7%;--d:17.9s;--w:-1.1s;--z:2.9px;--o:0.54;--t:64%"></i><i style="left:2.3%;--d:13.2s;--w:-5.0s;--z:2.4px;--o:0.38;--t:73%"></i><i style="left:12.9%;--d:11.2s;--w:-3.7s;--z:4.6px;--o:0.39;--t:44%"></i><i style="left:54.9%;--d:17.0s;--w:-1.1s;--z:4.6px;--o:0.49;--t:41%"></i><i style="left:35.9%;--d:17.0s;--w:-0.3s;--z:2.5px;--o:0.44;--t:24%"></i><i style="left:23.3%;--d:13.4s;--w:-2.5s;--z:2.8px;--o:0.35;--t:41%"></i><i style="left:36.9%;--d:14.1s;--w:-0.3s;--z:4.1px;--o:0.61;--t:59%"></i><i style="left:67.6%;--d:9.5s;--w:-0.6s;--z:4.3px;--o:0.79;--t:76%"></i><i style="left:39.2%;--d:12.6s;--w:-5.4s;--z:3.9px;--o:0.38;--t:8%"></i><i style="left:20.9%;--d:10.5s;--w:-4.0s;--z:2.2px;--o:0.35;--t:16%"></i><i style="left:10.1%;--d:12.3s;--w:-5.8s;--z:4.6px;--o:0.66;--t:16%"></i><i style="left:25.2%;--d:12.1s;--w:-3.8s;--z:2.4px;--o:0.77;--t:94%"></i><i style="left:46.6%;--d:13.4s;--w:-5.5s;--z:2.3px;--o:0.52;--t:27%"></i><i style="left:82.9%;--d:10.5s;--w:-5.9s;--z:4.9px;--o:0.61;--t:16%"></i></div>
+  <div class="edge edge-tl" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#fir"/></svg></div>
+  <div class="edge edge-br" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#fir"/></svg></div>
+  <div class="stage">
+    <div class="fir fir-l" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#fir"/></svg></div>
+    <div class="fir fir-r" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#fir"/></svg></div>
+    <div class="fir fir-b" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#fir"/></svg></div>
+    <article class="arch">
+      <div class="arch-in">
+        <svg class="flake" aria-hidden="true"><use href="#flake"/></svg>
+        <p class="script" aria-hidden="true">Winter Seminar</p>
+        <h1 class="cover-title">사회과학대학 교수세미나<span class="cover-season">2026 동계</span></h1>
+        <p class="cover-lead">사회과학대학 소속 교수님들의<br>많은 관심과 참여 부탁드립니다.</p>
+        <p class="date" aria-label="2026년 12월 10일"><span class="n">2026</span><span class="dot"></span><span class="n">12</span><span class="dot"></span><span class="n">10</span></p>
+        <p class="cover-meta">
+          <span class="time">오후 3:00 ~ 8:00</span><br>
+          덕문관 텔레프레젠스실 (5001호)<br>
+          만찬 · 한상차림 코다리명가
+        </p>
+      </div>
+    </article>
+  </div>
+</header>
+
+<div class="trim" aria-hidden="true"></div>
+
+<main class="body">
+  <div class="sheet">
+
+    <section class="sec letter" aria-labelledby="h-letter">
+      <h2 id="h-letter">사과대 교수세미나에 초대합니다.</h2>
+      <p>안녕하십니까.</p>
+      <p>26-2학기 사회과학대학 교수세미나에 교수님들을 초대합니다.</p>
+      <p>너무나 짧아진 가을을 아쉬워할 겨를도 없이 겨울이 성큼 다가왔습니다. 학기 말에 강의와 연구로 바쁜 시간이지만, 잠시 짬을 내어 사과대 구성원들 간 학문적, 인간적 교류의 시간을 갖고자 합니다.</p>
+      <p>이번 교수세미나에서는 퇴임 교수님께 그간의 노고를 감사드리고, 신임 교수님들을 환영하며 그분들의 연구성과를 공유하고, 교수간담회와 만찬으로 이어지는 프로그램을 준비하였습니다. 행사 준비에 노고를 아끼지 않으신 모든 분께 진심으로 감사드립니다.</p>
+      <p>학기 및 연말 마무리로 분주하실 시간이지만 우리 단과대의 모든 구성원이 만나 교류하는 유일한 시간인 만큼 꼭 참석하셔서, 우리 대학 현안에 대한 생각과 세상 이야기를 나누면서 서로 소통하고 화합하는 좋은 시간이 되기를 기대합니다.</p>
+      <p class="close">감사합니다.</p>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
+
+    <section class="sec" aria-labelledby="h-when">
+      <h2 id="h-when">일시</h2>
+      <p class="when-line" id="whenLine">2026년 12월 10일 목요일 오후 3시</p>
+      <table class="cal" id="cal" aria-label="행사 날짜 달력"></table>
+      <p class="dday" id="dday" hidden></p>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
+
+    <section class="sec" aria-labelledby="h-prog">
+      <h2 id="h-prog">프로그램</h2>
+      <ol class="program">
+        <li>퇴임 교수님 감사 인사</li>
+        <li>신임 교수님 환영 및 연구성과 발표</li>
+        <li>교수간담회<small>덕문관 텔레프레젠스실 (5001호)</small></li>
+        <li>만찬<small>한상차림 코다리명가 광교산점</small></li>
+      </ol>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
+
+    <section class="sec" aria-labelledby="h-where">
+      <h2 id="h-where">오시는 길</h2>
+      <div class="place">
+        <span class="tag">세미나</span>
+        <h3>덕문관 텔레프레젠스실 (5001호)</h3>
+        <p>경기대학교 수원캠퍼스 덕문관</p>
+        <div class="btns">
+          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/search/%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8D%95%EB%AC%B8%EA%B4%80"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8D%95%EB%AC%B8%EA%B4%80"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
+        </div>
+      </div>
+      <div class="place">
+        <span class="tag">만찬</span>
+        <h3>한상차림 코다리명가 광교산점</h3>
+        <p>경기 수원시 장안구 광교산로 164</p>
+        <div class="btns">
+          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/search/%ED%95%9C%EC%83%81%EC%B0%A8%EB%A6%BC%20%EC%BD%94%EB%8B%A4%EB%A6%AC%EB%AA%85%EA%B0%80%20%EA%B4%91%EA%B5%90%EC%82%B0%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%ED%95%9C%EC%83%81%EC%B0%A8%EB%A6%BC%20%EC%BD%94%EB%8B%A4%EB%A6%AC%EB%AA%85%EA%B0%80%20%EA%B4%91%EA%B5%90%EC%82%B0%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
+
+    <section class="sec contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">문의</h2>
+      <p>사회과학대학 교학팀</p>
+      <a class="tel" href="tel:031-249-9361">031-249-9361</a>
+    </section>
+
+  </div>
+</main>
+
+<footer>사회과학대학</footer>
+
+<script>
+(function(){
+  // 행사 날짜: 여기만 바꾸면 달력·D-day가 함께 바뀝니다
+  var EVENT = { y: 2026, m: 12, d: 10 };
+
+  var days = ['일','월','화','수','목','금','토'];
+  var first = new Date(EVENT.y, EVENT.m - 1, 1).getDay();
+  var last = new Date(EVENT.y, EVENT.m, 0).getDate();
+  var html = '<caption>' + EVENT.y + '년 ' + EVENT.m + '월</caption><thead><tr>';
+  days.forEach(function(d){ html += '<th scope="col">' + d + '</th>'; });
+  html += '</tr></thead><tbody><tr>';
+  for (var i = 0; i < first; i++) html += '<td></td>';
+  for (var day = 1; day <= last; day++){
+    var col = (first + day - 1) % 7;
+    if (col === 0 && day !== 1) html += '</tr><tr>';
+    html += day === EVENT.d ? '<td class="on" aria-current="date"><span>' + day + '</span></td>' : '<td>' + day + '</td>';
+  }
+  var tail = (7 - ((first + last) % 7)) % 7;
+  for (var j = 0; j < tail; j++) html += '<td></td>';
+  html += '</tr></tbody>';
+  document.getElementById('cal').innerHTML = html;
+
+  var wd = days[new Date(EVENT.y, EVENT.m - 1, EVENT.d).getDay()];
+  document.getElementById('whenLine').textContent = EVENT.y + '년 ' + EVENT.m + '월 ' + EVENT.d + '일 ' + wd + '요일 오후 3시';
+
+  var now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var diff = Math.round((new Date(EVENT.y, EVENT.m - 1, EVENT.d) - today) / 86400000);
+  var el = document.getElementById('dday');
+  if (diff > 0) el.innerHTML = '세미나까지 <b>' + diff + '일</b> 남았습니다';
+  else if (diff === 0) el.innerHTML = '<b>오늘</b> 뵙겠습니다';
+  else el.textContent = '세미나가 마무리되었습니다. 함께해 주셔서 감사합니다';
+  el.hidden = false;
+})();
+</script>
+</body>
+</html>
