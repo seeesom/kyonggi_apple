@@ -140,8 +140,19 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4
 .btn:hover{background:var(--pine);color:#fff}
 .btn svg{width:15px;height:15px}
 
-.contact p{margin:0;font-size:15px}
-.contact .tel{display:inline-block;margin-top:6px;font-size:18px;font-weight:700;text-decoration:none;color:var(--pine);border-bottom:1px solid var(--gold)}
+/* 웹에서만 적용되는 줄바꿈 */
+@media (max-width:759px){br.pc{display:none}}
+@media (min-width:760px){
+  /* 웹: 흰 칸이 인사말의 가장 긴 줄에 딱 맞게만 넓어짐 */
+  .sheet{width:fit-content;min-width:560px;max-width:100%;padding-left:48px;padding-right:48px}
+  .letter p{white-space:nowrap}
+}
+.map-box{margin:6px auto 18px;max-width:640px;border:1px solid var(--paper-line);background:#fff;overflow:hidden}
+.map-box .root_daum_roughmap{width:100% !important}
+.map-box .root_daum_roughmap .wrap_map{width:100% !important}
+.map-box[hidden]{display:none}
+.contact .team{display:inline-block;margin:0;font-size:18px;font-weight:700;color:var(--pine);border-bottom:1px solid var(--gold);line-height:1.6}
+.contact .tel{display:block;width:fit-content;margin:8px auto 0;font-size:15px;color:var(--ink);text-decoration:none}
 
 footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26px 16px;font-size:13px;letter-spacing:.04em}
 
@@ -194,9 +205,9 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
         <p class="cover-lead">사회과학대학 소속 교수님들의<br>많은 관심과 참여 부탁드립니다.</p>
         <p class="date" aria-label="2026년 12월 10일"><span class="n">2026</span><span class="dot"></span><span class="n">12</span><span class="dot"></span><span class="n">10</span></p>
         <p class="cover-meta">
-          <span class="time">오후 3:00 ~ 8:00</span><br>
+          <span class="time">오후 4:00 ~ 8:00</span><br>
           덕문관 텔레프레젠스실 (5001호)<br>
-          만찬 · 한상차림 코다리명가
+          만찬 · 돈블랑 광교역점
         </p>
       </div>
     </article>
@@ -209,20 +220,21 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
   <div class="sheet">
 
     <section class="sec letter" aria-labelledby="h-letter">
-      <h2 id="h-letter">사과대 교수세미나에 초대합니다.</h2>
+      <h2 id="h-letter">사회과학대학 교수세미나에 초대합니다</h2>
       <p>안녕하십니까.</p>
-      <p>26-2학기 사회과학대학 교수세미나에 교수님들을 초대합니다.</p>
-      <p>너무나 짧아진 가을을 아쉬워할 겨를도 없이 겨울이 성큼 다가왔습니다. 학기 말에 강의와 연구로 바쁜 시간이지만, 잠시 짬을 내어 사과대 구성원들 간 학문적, 인간적 교류의 시간을 갖고자 합니다.</p>
-      <p>이번 교수세미나에서는 퇴임 교수님께 그간의 노고를 감사드리고, 신임 교수님들을 환영하며 그분들의 연구성과를 공유하고, 교수간담회와 만찬으로 이어지는 프로그램을 준비하였습니다. 행사 준비에 노고를 아끼지 않으신 모든 분께 진심으로 감사드립니다.</p>
-      <p>학기 및 연말 마무리로 분주하실 시간이지만 우리 단과대의 모든 구성원이 만나 교류하는 유일한 시간인 만큼 꼭 참석하셔서, 우리 대학 현안에 대한 생각과 세상 이야기를 나누면서 서로 소통하고 화합하는 좋은 시간이 되기를 기대합니다.</p>
-      <p class="close">감사합니다.</p>
+      <p class="one-line">2026-2 사회과학대학 교수세미나에 교수님들을 모시고자 합니다.</p>
+      <p>어느덧 겨울을 맞아 한 학기를 마무리할 때가 되었습니다. <br class="pc">그간 교육과 연구, 학생 지도에 헌신해 주신 교수님들께 깊이 감사드립니다.</p>
+      <p>이번 세미나에서는 세 분의 퇴임 교수님께 그간의 노고에 <br class="pc">감사의 마음을 전하는 시간을 마련하였습니다. <br class="pc">아울러 신임 교수님의 연구 발표와 간담회, 만찬을 함께하며 <br class="pc">학문적 성과를 나누고 교수님들 간의 화합을 다지고자 합니다.</p>
+      <p>연말을 앞두고 바쁘시겠지만, <br class="pc">이번 세미나가 뜻깊은 시간이 될 수 있도록 <br class="pc">참석하시어 자리를 빛내 주시기 바랍니다.</p>
+      <p>끝으로, 이번 행사를 위해 애써 주신 모든 분께 감사드리며 <br class="pc">교수님들의 건강과 행복을 기원합니다.</p>
+      <p class="close">반가운 마음으로 곧 뵙겠습니다.<br>감사합니다.</p>
     </section>
 
     <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
 
     <section class="sec" aria-labelledby="h-when">
       <h2 id="h-when">일시</h2>
-      <p class="when-line" id="whenLine">2026년 12월 10일 목요일 오후 3시</p>
+      <p class="when-line" id="whenLine">2026년 12월 10일 목요일 오후 4시</p>
       <table class="cal" id="cal" aria-label="행사 날짜 달력"></table>
       <p class="dday" id="dday" hidden></p>
     </section>
@@ -232,10 +244,11 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
     <section class="sec" aria-labelledby="h-prog">
       <h2 id="h-prog">프로그램</h2>
       <ol class="program">
-        <li>퇴임 교수님 감사 인사</li>
-        <li>신임 교수님 환영 및 연구성과 발표</li>
-        <li>교수간담회<small>덕문관 텔레프레젠스실 (5001호)</small></li>
-        <li>만찬<small>한상차림 코다리명가 광교산점</small></li>
+        <li>개회 및 환영사</li>
+        <li>퇴임교원 감사패 수여 및 신임교원 소개</li>
+        <li>연구 발표 및 토론</li>
+        <li>교수간담회</li>
+        <li>만찬<small>돈블랑 광교역점</small></li>
       </ol>
     </section>
 
@@ -254,11 +267,30 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
       </div>
       <div class="place">
         <span class="tag">만찬</span>
-        <h3>한상차림 코다리명가 광교산점</h3>
-        <p>경기 수원시 장안구 광교산로 164</p>
+        <div class="map-box" id="mapBox">
+          <div id="daumRoughmapContainer1794450715490" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+        </div>
+        <script>
+          function renderDinnerMap(){
+            var box = document.getElementById('mapBox');
+            try {
+              var w = Math.min(box.clientWidth || 320, 640);
+              new daum.roughmap.Lander({
+                "timestamp": "1794450715490",
+                "key": "4v7jiz6sikn",
+                "mapWidth": String(w),
+                "mapHeight": String(Math.round(w * 0.62))
+              }).render();
+            } catch (e) { box.hidden = true; }
+          }
+          function hideDinnerMap(){ document.getElementById('mapBox').hidden = true; }
+        </script>
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://t1.kakaocdn.net/kakaomapweb/roughmap/loader/prod/roughmapLoader.js" onload="renderDinnerMap()" onerror="hideDinnerMap()"></script>
+        <h3>돈블랑 광교역점</h3>
+        <p>경기 수원시 영통구 대학로 60</p>
         <div class="btns">
-          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/search/%ED%95%9C%EC%83%81%EC%B0%A8%EB%A6%BC%20%EC%BD%94%EB%8B%A4%EB%A6%AC%EB%AA%85%EA%B0%80%20%EA%B4%91%EA%B5%90%EC%82%B0%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%ED%95%9C%EC%83%81%EC%B0%A8%EB%A6%BC%20%EC%BD%94%EB%8B%A4%EB%A6%AC%EB%AA%85%EA%B0%80%20%EA%B4%91%EA%B5%90%EC%82%B0%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/map/1511516515"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%8F%88%EB%B8%94%EB%9E%91%20%EA%B4%91%EA%B5%90%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
         </div>
       </div>
     </section>
@@ -267,7 +299,7 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
 
     <section class="sec contact" aria-labelledby="h-contact">
       <h2 id="h-contact">문의</h2>
-      <p>사회과학대학 교학팀</p>
+      <p class="team">사회과학대학 교학팀</p>
       <a class="tel" href="tel:031-249-9361">031-249-9361</a>
     </section>
 
@@ -299,7 +331,7 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
   document.getElementById('cal').innerHTML = html;
 
   var wd = days[new Date(EVENT.y, EVENT.m - 1, EVENT.d).getDay()];
-  document.getElementById('whenLine').textContent = EVENT.y + '년 ' + EVENT.m + '월 ' + EVENT.d + '일 ' + wd + '요일 오후 3시';
+  document.getElementById('whenLine').textContent = EVENT.y + '년 ' + EVENT.m + '월 ' + EVENT.d + '일 ' + wd + '요일 오후 4시';
 
   var now = new Date();
   var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
