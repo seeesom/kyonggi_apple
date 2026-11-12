@@ -107,6 +107,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4
 .sec h3{font-size:17px;font-weight:700;margin:0 0 4px;color:var(--ink)}
 .letter p{margin:0 0 1.35em;font-size:15.5px}
 .letter p.close{margin:2em 0 0}
+.letter p.sign{margin:2.2em 0 0;font-size:clamp(16px,4.4vw,19px);font-weight:700;color:var(--pine);line-height:1.5}
 .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:46px auto;width:180px;color:var(--gold-deep)}
 .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--gold)}
 .divider svg{width:18px;height:18px;flex:none}
@@ -147,7 +148,10 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4
   .sheet{width:fit-content;min-width:560px;max-width:100%;padding-left:48px;padding-right:48px}
   .letter p{white-space:nowrap}
 }
-.map-box{margin:6px auto 18px;max-width:640px;border:1px solid var(--paper-line);background:#fff;overflow:hidden}
+.map-box{margin:20px auto 0;max-width:640px;border:1px solid var(--paper-line);background:#fff;overflow:hidden}
+/* 지도 아래 카카오 메뉴(로드뷰·길찾기·지도 크게 보기)와 주소·전화 숨김 */
+.map-box .root_daum_roughmap .wrap_controllers,
+.map-box .root_daum_roughmap .cont{display:none !important}
 .map-box .root_daum_roughmap{width:100% !important}
 .map-box .root_daum_roughmap .wrap_map{width:100% !important}
 .map-box[hidden]{display:none}
@@ -223,11 +227,12 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
       <h2 id="h-letter">사회과학대학 교수세미나에 초대합니다</h2>
       <p>안녕하십니까.</p>
       <p class="one-line">2026-2 사회과학대학 교수세미나에 교수님들을 모시고자 합니다.</p>
-      <p>어느덧 겨울을 맞아 한 학기를 마무리할 때가 되었습니다. <br class="pc">그간 교육과 연구, 학생 지도에 헌신해 주신 교수님들께 깊이 감사드립니다.</p>
-      <p>이번 세미나에서는 세 분의 퇴임 교수님께 그간의 노고에 <br class="pc">감사의 마음을 전하는 시간을 마련하였습니다. <br class="pc">아울러 신임 교수님의 연구 발표와 간담회, 만찬을 함께하며 <br class="pc">학문적 성과를 나누고 교수님들 간의 화합을 다지고자 합니다.</p>
+      <p>어느덧 겨울을 맞아 한 학기를 마무리할 때가 되었습니다. <br class="pc">교육과 연구, 학생 지도에 헌신해 주신 교수님들께 깊이 감사드립니다.</p>
+      <p>이번 세미나에서는 세 분의 퇴임 교수님께 <br class="pc">그간의 노고에 감사의 마음을 전하는 시간을 마련하였습니다. <br class="pc">아울러 신임 교수님의 연구 발표와 간담회, 만찬을 함께하며 <br class="pc">학문적 성과를 나누고 교수님들 간의 화합을 다지고자 합니다.</p>
       <p>연말을 앞두고 바쁘시겠지만, <br class="pc">이번 세미나가 뜻깊은 시간이 될 수 있도록 <br class="pc">참석하시어 자리를 빛내 주시기 바랍니다.</p>
       <p>끝으로, 이번 행사를 위해 애써 주신 모든 분께 감사드리며 <br class="pc">교수님들의 건강과 행복을 기원합니다.</p>
       <p class="close">반가운 마음으로 곧 뵙겠습니다.<br>감사합니다.</p>
+      <p class="sign">사회과학대학장 김 청 송 배상</p>
     </section>
 
     <div class="divider" aria-hidden="true"><svg><use href="#flake"/></svg></div>
@@ -267,14 +272,24 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
       </div>
       <div class="place">
         <span class="tag">만찬</span>
+        <h3>돈블랑 광교역점</h3>
+        <p>경기도 수원시 영통구 대학로 60 리치프라자3 1층</p>
+        <div class="btns">
+          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/map/1511516515"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%8F%88%EB%B8%94%EB%9E%91%20%EA%B4%91%EA%B5%90%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
+        </div>
         <div class="map-box" id="mapBox">
           <div id="daumRoughmapContainer1794450715490" class="root_daum_roughmap root_daum_roughmap_landing"></div>
         </div>
-        <script>
-          function renderDinnerMap(){
+        <!-- 카카오맵 지도 퍼가기: 카카오가 준 순서 그대로 (설치 스크립트 → 실행 스크립트) -->
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://t1.kakaocdn.net/kakaomapweb/roughmap/loader/prod/roughmapLoader.js"></script>
+        <script charset="UTF-8">
+          (function(){
             var box = document.getElementById('mapBox');
             try {
-              var w = Math.min(box.clientWidth || 320, 640);
+              var full = box.parentElement.clientWidth || 320;
+              var w = Math.round(Math.min(full * (window.innerWidth < 760 ? 0.82 : 0.7), 380));
+              box.style.width = w + 'px';
               new daum.roughmap.Lander({
                 "timestamp": "1794450715490",
                 "key": "4v7jiz6sikn",
@@ -282,16 +297,8 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
                 "mapHeight": String(Math.round(w * 0.62))
               }).render();
             } catch (e) { box.hidden = true; }
-          }
-          function hideDinnerMap(){ document.getElementById('mapBox').hidden = true; }
+          })();
         </script>
-        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://t1.kakaocdn.net/kakaomapweb/roughmap/loader/prod/roughmapLoader.js" onload="renderDinnerMap()" onerror="hideDinnerMap()"></script>
-        <h3>돈블랑 광교역점</h3>
-        <p>경기 수원시 영통구 대학로 60</p>
-        <div class="btns">
-          <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/link/map/1511516515"><svg aria-hidden="true"><use href="#pin"/></svg>카카오맵</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EB%8F%88%EB%B8%94%EB%9E%91%20%EA%B4%91%EA%B5%90%EC%A0%90"><svg aria-hidden="true"><use href="#pin"/></svg>네이버지도</a>
-        </div>
       </div>
     </section>
 
@@ -306,7 +313,7 @@ footer{background:var(--foot);color:var(--foot-ink);text-align:center;padding:26
   </div>
 </main>
 
-<footer>사회과학대학</footer>
+<footer>경기대학교 사회과학대학</footer>
 
 <script>
 (function(){
